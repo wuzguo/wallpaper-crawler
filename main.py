@@ -12,6 +12,8 @@ from dateutil.relativedelta import relativedelta
 
 
 def save_image(image_url, root, image_name):
+    """保存图片到本地"""
+
     splits = image_url.split('.')
     path = root + image_name + '.' + splits[-1]
     print('image path: ', path)
@@ -32,6 +34,7 @@ def save_image(image_url, root, image_name):
 
 
 def crawl_wallpaper(root):
+    """开始爬取数据，组装HTML页面的URL"""
     start_date = datetime.datetime.strptime('2021.02.01', '%Y.%m.%d')
     end_date = datetime.datetime.now()
     while start_date < end_date:
@@ -44,6 +47,7 @@ def crawl_wallpaper(root):
 
 
 def parse_html(image_view_url, root):
+    """解析HTML页面"""
     response = requests.get(image_view_url)
     print(response.status_code)
     if response.status_code == 200:
