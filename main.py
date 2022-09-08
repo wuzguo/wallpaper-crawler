@@ -13,9 +13,8 @@ from dateutil.relativedelta import relativedelta
 
 def save_image(image_url, root, image_name):
     splits = image_url.split('.')
-    ext_name = splits[len(splits) - 1]
-    path = root + image_name + '.' + ext_name
-    print('image path:', path)
+    path = root + image_name + '.' + splits[-1]
+    print('image path: ', path)
     try:
         if not os.path.exists(root):
             os.mkdir(root)
