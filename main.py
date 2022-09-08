@@ -31,7 +31,7 @@ def save_image(image_url, root, image_name):
         print('爬取失败', e)
 
 
-def crawl_html(root):
+def crawl_wallpaper(root):
     start_date = datetime.datetime.strptime('2021.02.01', '%Y.%m.%d')
     end_date = datetime.datetime.now()
     while start_date < end_date:
@@ -59,4 +59,4 @@ def parse_html(image_view_url, root):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    crawl_html('D:/wallpaper/')
+    crawl_wallpaper('D:/wallpaper/')
