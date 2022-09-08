@@ -7,10 +7,6 @@ from bs4 import BeautifulSoup
 from dateutil.relativedelta import relativedelta
 
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
 def __save_image(image_url, root, image_name):
     """保存图片到本地"""
     splits = image_url.split('.')
